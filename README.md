@@ -28,3 +28,18 @@ yes, you can
 3. the human label value(age, gender, etc..) in the given dataset has a lot of NULL values, how can we compare two values?
 
 for NULL values, you cannot evaluate. So for evaluation, use only non-null values in that file for labeled age (to evaluate your age prediction), and labeled_gender (to evaluate your gender prediction)
+
+
+
+## More
+
+Under: 
+https://github.com/euagendas/m3inference#existing-json-twitter-data
+
+You can see that if you have crawled tweets from the user based on their IDs (using Twitter API with a library that we use in Assignment 2: one example of a library would be tweepy: https://fairyonice.github.io/extract-someones-tweet-using-tweepy.html), in this format: https://github.com/euagendas/m3inference/blob/master/test/twitter_cache/example_tweets.jsonl
+
+Then from the tweets, you can use the tool to get the profile pictures of the users. 
+
+Using m3inference, you can predict gender, then use https://github.com/appeler/ethnicolr for predicting race. 
+
+For age prediction (<21, >=21), you can use m3inference (but their prediction for age is not so great), so you should use Tweepy as before to get each user's last 100 tweets, convert them to vectors using BERT's last 4 layers (and concatenate, you can see: https://github.com/google-research/bert#using-bert-to-extract-fixed-feature-vectors-like-elmo for extracting vectors from the last 4 layers given a tweet), then use logistic regression or other machine learning model trained on the age annotation in the "human_labeled_age" column in the annotated data (changing this column first to <21 and >=21 age labels) to train age prediction based on user tweets. 
