@@ -2,9 +2,9 @@
 ## Main tasks
 
 Main tasks can be devided into three part: Gender, age, and Race prediction. Details explained as following: 
-[Gender and Age](Twitter%20User%20Age%20and%20Gender.ipynb)
-### Gender
 
+### Gender
+[Gender and Age](Twitter%20User%20Age%20and%20Gender.ipynb)
 Using m3inference, you can predict gender.
 ```
  'output': {'age': {'19-29': 0.147,
