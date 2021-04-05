@@ -1,11 +1,29 @@
 # CS505
 
-
 [Gender and Age](Twitter%20User%20Age%20and%20Gender.ipynb)
+### Gender
 
+Using m3inference, you can predict gender.
+```
+ 'output': {'age': {'19-29': 0.147,
+                    '30-39': 0.8197,
+                    '<=18': 0.0049,
+                    '>=40': 0.0285},
+            'gender': {'female': 0.0006, 'male': 0.9994},
+            'org': {'is-org': 0.0, 'non-org': 1.0}}}
+```
+- Can we just say the above-given user is a male? 
+Yes, you can
+
+### Age
+For age prediction (<21, >=21), you can use m3inference (but their prediction for age is not so great), so you should use Tweepy as before to get each user's last 100 tweets, convert them to vectors using BERT's last 4 layers (and concatenate, you can see: https://github.com/google-research/bert#using-bert-to-extract-fixed-feature-vectors-like-elmo for extracting vectors from the last 4 layers given a tweet), then use logistic regression or other machine learning model trained on the age annotation in the "human_labeled_age" column in the annotated data (changing this column first to <21 and >=21 age labels) to train age prediction based on user tweets. 
+
+### Race
 [Race](Twitter%20User%20Race.ipynb)
 
-## Question
+Use https://github.com/appeler/ethnicolr for predicting race. 
+
+## Response
 
 When I was using M3 inference, it outputs a json for each user like this:
 
@@ -30,8 +48,6 @@ yes, you can
 for NULL values, you cannot evaluate. So for evaluation, use only non-null values in that file for labeled age (to evaluate your age prediction), and labeled_gender (to evaluate your gender prediction)
 
 
-
-## More
 
 Under: 
 https://github.com/euagendas/m3inference#existing-json-twitter-data
