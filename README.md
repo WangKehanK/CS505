@@ -1,5 +1,7 @@
 # CS505
+## Main tasks
 
+Main tasks can be devided into three part: Gender, age, and Race prediction. Details explained as following: 
 [Gender and Age](Twitter%20User%20Age%20and%20Gender.ipynb)
 ### Gender
 
