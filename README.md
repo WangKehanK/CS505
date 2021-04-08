@@ -24,7 +24,7 @@ Yes, you can
 For age prediction (<21, >=21), you can use m3inference (but their prediction for age is not so great), so you should use Tweepy as before to get each user's last 100 tweets, convert them to vectors using BERT's last 4 layers (and concatenate, you can see: https://github.com/google-research/bert#using-bert-to-extract-fixed-feature-vectors-like-elmo for extracting vectors from the last 4 layers given a tweet), then use logistic regression or other machine learning model trained on the age annotation in the "human_labeled_age" column in the annotated data (changing this column first to <21 and >=21 age labels) to train age prediction based on user tweets. 
 
 ### Race
-[Race](Twitter_User_Race.ipynb)
+- [Race](Twitter_User_Race.ipynb)
 
 Use https://github.com/appeler/ethnicolr for predicting race. 
 
