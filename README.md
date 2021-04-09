@@ -7,7 +7,7 @@ Main tasks can be devided into three part: Gender, age, and Race prediction. Det
 - [Gender](Twitter_User_Gender.ipynb)
 - TODO: 
   - Predict gender for each user (we only did 1 user right now)
-  - Calculate accuracy based on human labeled value
+  - Calculate accuracy based on human.labeled.gender & lexicon.gender.prediction 
 Using m3inference, you can predict gender.
 ```
  'output': {'age': {'19-29': 0.147,
