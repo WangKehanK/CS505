@@ -25,13 +25,8 @@ Yes, you can
 
 ### Age
 - [Age](Twitter_User_Age.ipynb)
-- TODO: 
-  - Scrap 100 tweets for each user
-  - Build BERT
-  - Predict Age
-  - Calculate accruacy based on human labeled value
 
-For age prediction (<21, >=21), you can use m3inference (but their prediction for age is not so great), so you should use Tweepy as before to get each user's last 100 tweets, convert them to vectors using BERT's last 4 layers (and concatenate, you can see: https://github.com/google-research/bert#using-bert-to-extract-fixed-feature-vectors-like-elmo for extracting vectors from the last 4 layers given a tweet), then use logistic regression or other machine learning model trained on the age annotation in the "human_labeled_age" column in the annotated data (changing this column first to <21 and >=21 age labels) to train age prediction based on user tweets. 
+First, input the user's tweets into the BERT separately. Second, concatenate the BERT's last 4 layers of [CLS] to represent a tweet as a vector. Third, Average all vectors of the tweets for each user, so each user has a vector representation. Then, the vector is mapped to a smaller vector through a layer of fully connected neural networks. Finally, the vector is mapped to a range of 0-1 by the fully connected neural network following the Sigmoid activation function for classification. When the value is greater than or equal to 0,5, the user's age is predicted to be greater than or equal to 21, otherwise less than 21.
 
 ### Race
 - [Race](Twitter_User_Race.ipynb)
