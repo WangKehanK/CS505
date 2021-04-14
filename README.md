@@ -5,10 +5,9 @@ Main tasks can be devided into three part: Gender, age, and Race prediction. Det
 
 ### Gender
 - [Gender](Twitter_User_Gender.ipynb)
-- [prediction on Twitter labeled data all users](https://github.com/WangKehanK/CS505/blob/main/data/Twitter_users_labeled_prediction_allUser.csv)
+- [prediction on Twitter labeled data only users with labeled gender](https://github.com/WangKehanK/CS505/blob/main/data/Twitter_users_labeled_prediction_gender.csv)
+- [prediction on Twitter labeled data all users](https://github.com/WangKehanK/CS505/blob/main/data/Twitter_users_labeled_prediction_gender_allUser.csv)
 - TODO: 
-  - Predict gender for each user (we only did 1 user right now) (done)
-  - Calculate accuracy based on human.labeled.gender & lexicon.gender.prediction (done)
   - Predict gender for second dataset
 
 
