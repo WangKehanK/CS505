@@ -5,7 +5,7 @@ Main tasks can be devided into three part: Gender, age, and Race prediction. Det
 
 ### Gender
 - [Gender](Twitter_User_Gender.ipynb)
-- [prediction on Twitter labeled data all users](https://github.com/WangKehanK/CS505/blob/main/data/gender_prediction/Twitter_users_labeled_prediction_gender_allUser.csv)
+- [prediction on Twitter labeled data](https://github.com/WangKehanK/CS505/blob/main/data/gender_prediction/Twitter_users_labeled_prediction_gender_allUser.csv)
 - [prediction on Twitter unlabeled data](https://github.com/WangKehanK/CS505/blob/main/data/gender_prediction/Twitter_user_handles_to_predict_gender.csv)
 
 
