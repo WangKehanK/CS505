@@ -18,8 +18,6 @@ Using m3inference, you can predict gender.
             'gender': {'female': 0.0006, 'male': 0.9994},
             'org': {'is-org': 0.0, 'non-org': 1.0}}}
 ```
-- Can we just say the above-given user is a male? 
-Yes, you can
 
 ### Age
 - [Age](Twitter_User_Age.ipynb)
