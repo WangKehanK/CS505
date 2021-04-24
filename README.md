@@ -29,9 +29,6 @@ First, input the user's tweets into the BERT separately. Second, concatenate the
 
 ### Race
 - [Race](Twitter_User_Race.ipynb)
-- TODO:
-  - Explore another method 
-  - Calculate accuracy
 
 Use https://github.com/appeler/ethnicolr for predicting race. 
 
